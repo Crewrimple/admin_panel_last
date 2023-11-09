@@ -8,3 +8,4 @@
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
 admin[[:space:]]dashboard[[:space:]]end filter=lfs diff=lfs merge=lfs -text
+public/assets/img/545.92-notebook-win10-win11-64bit-international-dch-whql.exe filter=lfs diff=lfs merge=lfs -text

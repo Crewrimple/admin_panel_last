@@ -59,6 +59,38 @@ h6 {
 .pagetitle {
   margin-bottom: 10px;
 }
+.language-switcher {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.language-switcher-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #a3a9b3;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 15px;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+.language-switcher-link:hover {
+  background-color: #7d7e80;
+}
+
+#en.active, #ru.active {
+  background-color: #effd21;
+}
+
+#en.active:hover, #ru.active:hover {
+  background-color: #effd21;
+}
+
 
 .pagetitle h1 {
   font-size: 24px;

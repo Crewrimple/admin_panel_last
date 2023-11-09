@@ -24,12 +24,12 @@ class ProfileController extends Controller
             'password' => 'nullable|min:6|confirmed',
         ]);
     
-        $user->name = $validatedData['name'];
+        $user->name = $validatedData['name'];         
         $user->email = $validatedData['email'];
     
         if ($request->filled('password')) {
             if (!Hash::check($validatedData['currentPassword'], $user->password)) {
-                return redirect()->back()->withErrors(['currentPassword' => 'Current password is incorrect']);
+                return redirect()->back()->withErrors(['current_Password' => 'Current password is incorrect']);
             }
     
             $user->password = bcrypt($validatedData['password']);
@@ -39,6 +39,7 @@ class ProfileController extends Controller
     
         return redirect()->route('show.profile')->with('success', 'Profile and Password updated successfully');
     }
+    
     
 
     

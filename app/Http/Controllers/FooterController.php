@@ -10,4 +10,5 @@ class FooterController extends Controller
     {
         return view('layout.footer');
     }
+    
 }

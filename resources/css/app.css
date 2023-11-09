@@ -1,0 +1,31 @@
+.language-switcher {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.language-switcher-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #6c757d;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 15px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.language-switcher-link:hover {
+    background-color: #5a6268;
+}
+
+#en.active, #ru.active {
+    background-color: #daf013;
+}
+
+#en.active:hover, #ru.active:hover {
+    background-color: #0056b3;
+}

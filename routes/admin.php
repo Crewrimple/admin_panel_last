@@ -5,11 +5,12 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\ProfileController; // Добавьте импорт вашего ProfileController
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SidebarController;
 use App\Http\Controllers\TablesdataController;
 use App\Http\Controllers\TablesgeneralController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\LocaleController;
 
 Route::match(['GET', 'POST'], 'login', [LoginController::class, 'login'])
     ->name('login')
@@ -25,7 +26,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/tabledata', [TablesdataController::class, 'showTablesdata'])->name('show.tabledata');
     Route::get('/tablesgeneral', [TablesgeneralController::class, 'showTablesgeneral'])->name('show.tablegeneral');
     Route::get('/profile', [ProfileController::class, 'showProfile'])->name('show.profile');
-    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/profile/update', [ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
+    Route::get('/locale/{locale}', [LocaleController::class, 'setLocale'])->name('setLocale');
 });

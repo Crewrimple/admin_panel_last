@@ -10,4 +10,5 @@ class HeaderController extends Controller
     {
         return view('layout.header');
     }
+    
 }
